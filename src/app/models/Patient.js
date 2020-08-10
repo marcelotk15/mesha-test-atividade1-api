@@ -5,7 +5,7 @@ class Patient extends Model {
     super.init(
       {
         name: Sequelize.STRING,
-        birth: Sequelize.DATE,
+        birthday: Sequelize.DATE,
         email: Sequelize.STRING,
         phone: Sequelize.STRING,
       },
@@ -18,7 +18,7 @@ class Patient extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.File, { foreignKey: "avatar_id" });
+    this.belongsTo(models.Avatar, { foreignKey: "avatar_id" });
   }
 }
 

@@ -4,7 +4,9 @@ class Procedure extends Model {
   static init(sequelize) {
     super.init(
       {
-        annotation: Sequelize.STRING,
+        name: Sequelize.STRING,
+        price: Sequelize.DECIMAL(10, 2),
+        duration: Sequelize.INTEGER,
       },
       { sequelize }
     );

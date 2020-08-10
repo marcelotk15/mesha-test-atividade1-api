@@ -1,6 +1,8 @@
 const { Model, Sequelize } = require("sequelize");
 
-class File extends Model {
+const { SERVER_URL } = require("../../config/environments");
+
+class Avatar extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -22,4 +24,4 @@ class File extends Model {
   }
 }
 
-module.exports = File;
+module.exports = Avatar;

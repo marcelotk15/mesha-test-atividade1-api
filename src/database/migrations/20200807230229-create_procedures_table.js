@@ -19,6 +19,13 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
+      attendance_id: {
+        type: Sequelize.INTEGER,
+        references: { model: "attendances", key: "id" },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
+        allowNull: false,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

@@ -14,6 +14,9 @@ module.exports = {
         onDelete: "CASCADE",
         allowNull: false,
       },
+      annotation: {
+        type: Sequelize.STRING,
+      },
       started_at: {
         type: Sequelize.DATE,
         allowNull: false,
