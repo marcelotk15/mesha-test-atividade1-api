@@ -9,6 +9,7 @@
     "dev": "cross-env NODE_ENV=development nodemon ./src/bin/index.js --ignore __tests__"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",

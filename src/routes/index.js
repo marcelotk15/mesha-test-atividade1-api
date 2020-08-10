@@ -17,6 +17,7 @@ router.get("/", (req, res) =>
   successRes(res, { message: "UHUL! The API is UP && RUNNING" })
 );
 
+router.get("/patients", upload.single("avatar"), PatientController.list);
 router.post("/patients", upload.single("avatar"), PatientController.store);
 
 router.post("/attendances", AttendanceController.store);
