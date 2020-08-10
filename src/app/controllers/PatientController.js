@@ -40,3 +40,9 @@ exports.store = async (req, res) => {
 
   return successRes(res, { patient });
 };
+
+exports.list = async (req, res) => {
+  const patients = await Patient.findAll();
+
+  return successRes(res, { patients });
+};
